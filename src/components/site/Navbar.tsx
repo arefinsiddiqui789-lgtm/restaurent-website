@@ -25,6 +25,27 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Color tokens that flip based on whether the navbar is sitting over the
+  // dark hero photo (transparent) or the cream page background (scrolled).
+  //
+  // When transparent → use cream/white text so it's readable on the photo.
+  // When scrolled     → use dark charcoal text on the cream background.
+  const linkColor = scrolled
+    ? "text-[var(--brand-charcoal)] hover:text-[var(--brand-olive)]"
+    : "text-[var(--brand-cream)] hover:text-[var(--brand-gold)]";
+
+  const brandNameColor = scrolled
+    ? "text-[var(--brand-olive)]"
+    : "text-[var(--brand-cream)]";
+
+  const taglineColor = scrolled
+    ? "text-[var(--brand-terracotta)]"
+    : "text-[var(--brand-gold)]";
+
+  const hamburgerColor = scrolled
+    ? "text-[var(--brand-olive)]"
+    : "text-[var(--brand-cream)]";
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -40,14 +61,24 @@ export function Navbar() {
           aria-label={`${SITE_INFO.name} — home`}
           className="flex items-center gap-3"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--brand-olive)] text-sm font-bold text-[var(--brand-cream)]">
+          <span
+            className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold transition-colors duration-300 ${
+              scrolled
+                ? "bg-[var(--brand-olive)] text-[var(--brand-cream)]"
+                : "bg-[var(--brand-cream)] text-[var(--brand-olive)]"
+            }`}
+          >
             O
           </span>
           <span className="leading-none">
-            <span className="block font-display text-2xl font-semibold text-[var(--brand-olive)]">
+            <span
+              className={`block font-display text-2xl font-semibold transition-colors duration-300 ${brandNameColor}`}
+            >
               {SITE_INFO.name}
             </span>
-            <span className="mt-0.5 block text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[var(--brand-terracotta)]">
+            <span
+              className={`mt-0.5 block text-[0.65rem] font-semibold uppercase tracking-[0.25em] transition-colors duration-300 ${taglineColor}`}
+            >
               {SITE_INFO.tagline}
             </span>
           </span>
@@ -59,7 +90,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="group relative text-sm font-medium text-[var(--brand-charcoal)] transition-colors hover:text-[var(--brand-olive)]"
+              className={`group relative text-sm font-semibold transition-colors duration-300 ${linkColor}`}
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--brand-terracotta)] transition-all duration-300 group-hover:w-full" />
@@ -80,7 +111,7 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-[var(--brand-olive)]"
+              className={`lg:hidden transition-colors duration-300 ${hamburgerColor}`}
               aria-label="Open menu"
             >
               <Menu className="h-6 w-6" />
