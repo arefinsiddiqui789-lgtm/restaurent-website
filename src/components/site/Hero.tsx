@@ -8,16 +8,17 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[var(--brand-olive)]"
     >
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background image — sits at z-0, content sits at z-10 above it */}
+      <div className="absolute inset-0 z-0">
         <img
           src={HERO_IMAGE}
           alt="Warm candlelit dining room at Olivetta"
           className="h-full w-full object-cover"
           fetchPriority="high"
         />
+        {/* Dark gradient overlay so the headline stays readable on any photo */}
         <div
           className="absolute inset-0"
           style={{
@@ -27,7 +28,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto w-full max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +72,7 @@ export function Hero() {
       </div>
 
       {/* Meta strip at bottom of hero */}
-      <div className="absolute inset-x-0 bottom-6 flex flex-wrap justify-center gap-6 px-4 text-xs uppercase tracking-[0.08em] text-[var(--brand-cream)]/70 sm:text-sm">
+      <div className="absolute inset-x-0 bottom-6 z-10 flex flex-wrap justify-center gap-6 px-4 text-xs uppercase tracking-[0.08em] text-[var(--brand-cream)]/70 sm:text-sm">
         <span className="inline-flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-gold)]" />
           Tue – Sun
