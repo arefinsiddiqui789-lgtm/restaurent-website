@@ -55,21 +55,21 @@ const SIGNATURE_DISHES = [
     name: "Saffron Seafood Risotto",
     price: "$28",
     desc: "Carnaroli rice, day-boat prawns, clams, and calamari simmered in saffron shellfish stock.",
-    image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=900&q=80",
+    image: "assets/dish-risotto.jpg",
     tag: "Signature"
   },
   {
     name: "Wood-Fired Lamb Shoulder",
     price: "$34",
     desc: "Six-hour braised lamb, smoked eggplant purée, pomegranate, and charred scallion.",
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80",
+    image: "assets/dish-lamb.jpg",
     tag: "Chef's Pick"
   },
   {
     name: "Burrata & Heirloom Tomato",
     price: "$16",
     desc: "Creamy burrata, sun-ripened heirloom tomatoes, basil oil, and toasted sourdough.",
-    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80",
+    image: "assets/dish-burrata.jpg",
     tag: "Seasonal"
   }
 ];
@@ -214,11 +214,11 @@ const MENU = [
    -------------------------------------------------------------------------- */
 
 const GALLERY_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80", alt: "Warm dining room with hanging lights", size: "wide" },
-  { src: "https://images.unsplash.com/photo-1551218372-a8789b81b253?auto=format&fit=crop&w=600&q=80", alt: "Plated seafood dish", size: "tall" },
-  { src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80", alt: "Pouring red wine", size: "regular" },
-  { src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80", alt: "Fresh pasta being rolled", size: "regular" },
-  { src: "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80", alt: "Bread and olive oil", size: "wide" }
+  { src: "assets/gallery-1.jpg", alt: "Warm dining room with hanging lights", size: "wide" },
+  { src: "assets/gallery-2.jpg", alt: "Plated seafood dish", size: "tall" },
+  { src: "assets/gallery-3.jpg", alt: "Pouring red wine", size: "regular" },
+  { src: "assets/gallery-4.jpg", alt: "Fresh pasta being rolled", size: "regular" },
+  { src: "assets/gallery-5.jpg", alt: "Bread and olive oil", size: "wide" }
 ];
 
 
