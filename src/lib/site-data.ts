@@ -83,24 +83,21 @@ export const SIGNATURE_DISHES: Dish[] = [
     name: "Saffron Seafood Risotto",
     price: "$28",
     desc: "Carnaroli rice, day-boat prawns, clams, and calamari simmered in saffron shellfish stock.",
-    image:
-      "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=900&q=80",
+    image: "/dish-risotto.jpg",
     tag: "Signature",
   },
   {
     name: "Wood-Fired Lamb Shoulder",
     price: "$34",
     desc: "Six-hour braised lamb, smoked eggplant purée, pomegranate, and charred scallion.",
-    image:
-      "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80",
+    image: "/dish-lamb.jpg",
     tag: "Chef's Pick",
   },
   {
     name: "Burrata & Heirloom Tomato",
     price: "$16",
     desc: "Creamy burrata, sun-ripened heirloom tomatoes, basil oil, and toasted sourdough.",
-    image:
-      "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80",
+    image: "/dish-burrata.jpg",
     tag: "Seasonal",
   },
 ];
@@ -238,27 +235,27 @@ export const MENU: MenuGroup[] = [
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
+    src: "/gallery-1.jpg",
     alt: "Warm dining room with hanging lights",
     size: "wide",
   },
   {
-    src: "https://images.unsplash.com/photo-1551218372-a8789b81b253?auto=format&fit=crop&w=600&q=80",
+    src: "/gallery-2.jpg",
     alt: "Plated seafood dish",
     size: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80",
+    src: "/gallery-3.jpg",
     alt: "Pouring red wine",
     size: "regular",
   },
   {
-    src: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
+    src: "/gallery-4.jpg",
     alt: "Fresh pasta being rolled",
     size: "regular",
   },
   {
-    src: "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=80",
+    src: "/gallery-5.jpg",
     alt: "Bread and olive oil",
     size: "wide",
   },
@@ -278,8 +275,6 @@ export const TESTIMONIAL = {
    7. Hero background image
    -------------------------------------------------------------------------- */
 
-export const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80";
+export const HERO_IMAGE = "/hero.jpg";
 
-export const STORY_IMAGE =
-  "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80";
+export const STORY_IMAGE = "/story.jpg";
